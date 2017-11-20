@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pop">
+
+    <TextView
+        android:id="@+id/workout_setting_head_name"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/workout_mode_goal"
+        android:textColor="@color/workout_mode_white"
+        android:textSize="16pt"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/workout_setting_head_icon"
+        android:layout_width="58dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:src="@mipmap/img_program_goal_icon"
+        app:layout_constraintLeft_toRightOf="@+id/workout_setting_head_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/workout_setting_head_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="170dp"
+        android:paddingRight="170dp"
+        android:text="@string/workout_mode_hint_g"
+        android:textColor="@color/workout_mode_white"
+        android:textSize="12pt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workout_setting_head_name" />
+
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/activity_workout_setting_goal_body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginRight="180dp"
+        app:layout_constraintBottom_toTopOf="@+id/include_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workout_setting_head_hint" />
+
+
+    <include
+        android:id="@+id/include_bottom"
+        layout="@layout/bottom_logo_tab2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

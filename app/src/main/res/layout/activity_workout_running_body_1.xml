@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workout_running_body_1"
+    android:layout_width="350dp"
+    android:layout_height="250dp">
+
+    <ImageView
+        android:id="@+id/workout_running_rpm_img"
+        android:layout_width="324dp"
+        android:layout_height="88dp"
+        android:src="@mipmap/img_sportmode_rpm_11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageView
+        android:id="@+id/workout_running_rpm_value_1"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="0dp"
+        android:src="@mipmap/tv_sportmode_rpm_0"
+        app:layout_constraintBottom_toBottomOf="@+id/workout_running_rpm_img"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/workout_running_rpm_value_2"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        android:src="@mipmap/tv_sportmode_rpm_0"
+        app:layout_constraintBottom_toBottomOf="@+id/workout_running_rpm_img"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/workout_running_rpm_value_1" />
+
+    <ImageView
+        android:id="@+id/workout_running_rpm_value_3"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        android:src="@mipmap/tv_sportmode_rpm_0"
+        app:layout_constraintBottom_toBottomOf="@+id/workout_running_rpm_img"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/workout_running_rpm_value_2" />
+
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="96dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img_sportmode_profile_level_calibration_2"
+        app:layout_constraintRight_toLeftOf="@+id/workout_running_level_view"
+        app:layout_constraintTop_toTopOf="@+id/workout_running_level_view" />
+
+    <com.sunrise.srs.views.LevelView
+        android:id="@+id/workout_running_level_view"
+        android:layout_width="300dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="12dp"
+        android:background="@mipmap/img_sportmode_profile_level_1"
+        app:buoyBitmapHeight="9"
+        app:buoyBitmapWidth="9"
+        app:columnMargin="1"
+        app:topSpace="23.8"
+        app:rightSpace="1.2"
+        app:bottomSpace="12.3"
+        app:leftSpace="1.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workout_running_rpm_img"
+        app:slideEnable="false" />
+
+
+    <TextView
+        android:id="@+id/workout_running_level_view_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/workout_mode_hill"
+        android:textColor="@color/factory_tabs_on"
+        android:textSize="4pt"
+        app:layout_constraintBottom_toBottomOf="@+id/workout_running_level_view"
+        app:layout_constraintLeft_toLeftOf="@+id/workout_running_level_view"
+        app:layout_constraintRight_toRightOf="@+id/workout_running_level_view"
+        app:layout_constraintTop_toTopOf="@+id/workout_running_level_view"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pop">
+
+    <TextView
+        android:id="@+id/factories_title"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="@string/factory_mode_title"
+        android:textColor="@color/factory_title"
+        android:textSize="18pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/factories_hint"
+        android:layout_width="650dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/factory_mode_hint"
+        android:textColor="@color/factory_hint"
+        android:textSize="14pt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/factories_title" />
+
+
+    <ImageView
+        android:id="@+id/factories_1"
+        android:layout_width="238dp"
+        android:layout_height="240dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_factories_1"
+        app:layout_constraintBottom_toTopOf="@+id/myBottomTabView2"
+        app:layout_constraintHorizontal_bias="0.302"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/factories_hint" />
+
+
+    <ImageView
+        android:id="@+id/factories_2"
+        android:layout_width="238dp"
+        android:layout_height="240dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_factories_2"
+        app:layout_constraintBottom_toTopOf="@+id/myBottomTabView2"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/factories_hint"/>
+
+    <include
+        android:id="@+id/myBottomTabView2"
+        layout="@layout/bottom_logo_tab2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

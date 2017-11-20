@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="854dp"
+    android:layout_height="715dp"
+    android:background="@mipmap/img_sportmode_summary_2">
+
+
+    <TextView
+        android:id="@+id/summary_fragment2_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:gravity="center|left"
+        android:text="@string/level"
+        android:textColor="@color/summary_white"
+        android:textSize="16pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/summary_fragment2_avg"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:gravity="center|left"
+        android:text="@string/average"
+        android:textColor="@color/summary_white"
+        android:textSize="16pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/summary_fragment2_avg_value"
+        android:layout_width="80dp"
+        android:layout_height="95dp"
+        android:gravity="center"
+        android:text="11"
+        android:textColor="@color/summary_value"
+        android:textSize="20pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+
+    <TextView
+        android:id="@+id/summary_fragment2_avg_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:gravity="center|left"
+        android:text="@string/unit_percent"
+        android:textColor="@color/summary_white"
+        android:textSize="16pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <com.sunrise.srs.views.LineChat
+        android:id="@+id/summary_fragment2_lineChat"
+        android:layout_width="725dp"
+        android:layout_height="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.682"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rankCount="36" />
+
+</android.support.constraint.ConstraintLayout>

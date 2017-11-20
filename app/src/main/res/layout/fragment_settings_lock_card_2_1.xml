@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <TextView
+        android:id="@+id/settings_card4_2_customer_psw"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center|left"
+        android:text="@string/customer_psw"
+        android:textColor="@color/settings_white"
+        android:textSize="12pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/settings_card4_2_customer_psw_value"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <TextView
+        android:id="@+id/settings_card4_2_customer_psw_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center|right"
+        android:clickable="true"
+        android:gravity="center|right"
+        android:textColor="@color/settings_white"
+        android:textSize="12pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/settings_card4_2_customer_psw"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <ImageView
+        android:id="@+id/settings_card4_2_reset_1"
+        android:layout_width="171dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_card4_2_customer_psw"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/settings_card4_2_srs_psw"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center|left"
+        android:text="@string/srs_psw"
+        android:textColor="@color/settings_white"
+        android:textSize="12pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/settings_card4_2_srs_psw_value"
+        app:layout_constraintTop_toBottomOf="@+id/settings_card4_2_reset_1"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/settings_card4_2_srs_psw_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center|right"
+        android:gravity="center|right"
+        android:textColor="@color/settings_white"
+        android:textSize="12pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/settings_card4_2_srs_psw"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_card4_2_reset_1"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <ImageView
+        android:id="@+id/settings_card4_2_reset_2"
+        android:layout_width="171dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_card4_2_srs_psw_value"
+        app:layout_constraintVertical_bias="0.08" />
+</android.support.constraint.ConstraintLayout>

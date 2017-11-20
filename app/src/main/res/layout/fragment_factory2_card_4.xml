@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <TextView
+        android:id="@+id/factory2_card4_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="@string/msg_usb_update_logo"
+        android:textSize="16pt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/factory2_card4_update_logo"
+        android:layout_width="356dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_factory_2_up_data_logo" />
+
+</LinearLayout>

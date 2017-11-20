@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/workout_mode_hill"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/workout_mode_vr"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/workout_mode_interval"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/workout_mode_interval"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/workout_mode_vr"
+        app:layout_constraintLeft_toRightOf="@+id/workout_mode_hill"
+        app:layout_constraintRight_toLeftOf="@+id/workout_mode_goal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/workout_mode_goal"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/workout_mode_user_program"
+        app:layout_constraintLeft_toRightOf="@+id/workout_mode_interval"
+        app:layout_constraintRight_toLeftOf="@+id/workout_mode_fitness_test"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/workout_mode_fitness_test"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/workout_mode_user_program"
+        app:layout_constraintLeft_toRightOf="@+id/workout_mode_goal"
+        app:layout_constraintRight_toLeftOf="@+id/workout_mode_hrc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/workout_mode_hrc"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/workout_mode_quick_start"
+        app:layout_constraintLeft_toRightOf="@+id/workout_mode_fitness_test"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/workout_mode_vr"
+        android:layout_width="480dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/workout_mode_user_program"
+        app:layout_constraintTop_toBottomOf="@+id/workout_mode_hill" />
+
+    <ImageView
+        android:id="@+id/workout_mode_user_program"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/workout_mode_vr"
+        app:layout_constraintRight_toLeftOf="@+id/workout_mode_quick_start"
+        app:layout_constraintTop_toBottomOf="@+id/workout_mode_interval" />
+
+    <ImageView
+        android:id="@+id/workout_mode_quick_start"
+        android:layout_width="480dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/workout_mode_user_program"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workout_mode_fitness_test" />
+
+</android.support.constraint.ConstraintLayout>

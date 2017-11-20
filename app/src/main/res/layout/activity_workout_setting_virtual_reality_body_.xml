@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/workout_option_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/workout_vr_view_page"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/workout_vr_img"
+        android:layout_width="134dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/img_virtual_reality_page_1" />
+
+
+</LinearLayout>

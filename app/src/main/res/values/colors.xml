@@ -3,4 +3,41 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="transparent_color">#00000000</color>
+
+
+    <color name="language_btn_on">#5ABEDC</color>
+    <color name="language_btn_off">#FFFFFF</color>
+    <color name="language_btn_disable">#646464</color>
+
+
+    <color name="settings_title">#FFFFFF</color>
+    <color name="settings_hint">#FFFFFF</color>
+    <color name="settings_white">#FFFFFF</color>
+    <color name="settings_black">#000000</color>
+    <color name="settings_gary">#323232</color>
+    <color name="settings_tabs_on">#32B4FF</color>
+    <color name="settings_tabs_off">#323232</color>
+
+
+    <color name="factory_title">#FFFFFF</color>
+    <color name="factory_hint">#FFFFFF</color>
+    <color name="factory_white">#FFFFFF</color>
+    <color name="factory_black">#000000</color>
+    <color name="factory_gary">#323232</color>
+    <color name="factory_tabs_on">#32B4FF</color>
+    <color name="factory_tabs_off">#323232</color>
+    <color name="factory_brake_test">#EF7C00</color>
+
+    <color name="workout_mode_white">#FFFFFF</color>
+    <color name="workout_mode_select">#3C3C3C</color>
+
+
+    <color name="workout_mode_running_white">#FFFFFF</color>
+    <color name="workout_mode_running_head_value">#3C3C3C</color>
+
+
+    <color name="summary_white">#FFFFFF</color>
+    <color name="summary_value">#DC6400</color>
+
 </resources>

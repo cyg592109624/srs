@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pop">
+
+    <ImageView
+        android:id="@+id/home_btn_language"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginTop="61dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_home_language"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/home_btn_setting"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="61dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_home_setting"
+        app:layout_constraintBottom_toTopOf="@+id/home_viewPage"
+        app:layout_constraintRight_toLeftOf="@+id/home_btn_language"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_viewPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/home_img_vp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_btn_setting"
+        app:layout_constraintVertical_weight="1" />
+
+    <ImageView
+        android:id="@+id/home_img_vp"
+        android:layout_width="134dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/img_virtual_reality_page_1"
+        app:layout_constraintBottom_toTopOf="@+id/myBottomTabView1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_viewPage" />
+
+    <include
+        android:id="@+id/myBottomTabView1"
+        layout="@layout/bottom_logo_tab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_img_vp" />
+
+</android.support.constraint.ConstraintLayout>

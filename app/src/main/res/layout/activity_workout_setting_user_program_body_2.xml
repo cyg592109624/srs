@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workout_option_body2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView_left"
+        android:layout_width="52dp"
+        android:layout_height="278dp"
+        android:src="@mipmap/img_sportmode_profile_level_calibration_1"
+        app:layout_constraintRight_toLeftOf="@+id/workout_edit_level_view"
+        app:layout_constraintTop_toTopOf="@+id/workout_edit_level_view" />
+
+    <com.sunrise.srs.views.LevelView
+        android:id="@+id/workout_edit_level_view"
+        android:layout_width="818dp"
+        android:layout_height="350dp"
+        android:background="@mipmap/img_sportmode_profile_level_1"
+        app:bottomSpace="35.5"
+        app:columnMargin="2.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftSpace="5.0"
+        app:rightSpace="5"
+        app:slideEnable="true"
+        app:topSpace="65.0" />
+
+    <TextView
+        android:id="@+id/workout_edit_level_view_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/workout_mode_hint_e"
+        android:textColor="@color/factory_tabs_on"
+        android:textSize="8pt"
+        app:layout_constraintBottom_toBottomOf="@+id/workout_edit_level_view"
+        app:layout_constraintLeft_toLeftOf="@+id/workout_edit_level_view"
+        app:layout_constraintRight_toRightOf="@+id/workout_edit_level_view"
+        app:layout_constraintTop_toTopOf="@+id/workout_edit_level_view"
+        app:layout_constraintVertical_bias="0.99" />
+
+    <TextView
+        android:id="@+id/workout_setting_hint_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxWidth="600dp"
+        android:text="@string/workout_mode_hint_c"
+        android:textColor="@color/workout_mode_white"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="@+id/workout_setting_back"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/workout_setting_back"
+        app:layout_constraintRight_toLeftOf="@+id/workout_setting_start_2"
+        app:layout_constraintTop_toTopOf="@+id/workout_setting_back" />
+
+    <ImageView
+        android:id="@+id/workout_setting_back"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_factory_2_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
+
+    <ImageView
+        android:id="@+id/workout_setting_start_2"
+        android:layout_width="171dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
+
+</android.support.constraint.ConstraintLayout>

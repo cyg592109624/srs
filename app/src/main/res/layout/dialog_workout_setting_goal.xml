@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/dialog_workout_goal_value"
+        android:layout_width="358dp"
+        android:layout_height="360dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/btn_goal_time_3"
+        android:gravity="center"
+        android:text="@string/value_nothing"
+        android:textColor="@color/workout_mode_white"
+        android:textSize="30pt" />
+
+    <com.sunrise.srs.views.NumberKeyBoardView
+        android:id="@+id/dialog_workout_goal_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

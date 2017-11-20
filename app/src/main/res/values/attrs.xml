@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="levelView">
+        <attr name="columnMargin" format="float" />
+        <attr name="topSpace" format="float" />
+        <attr name="rightSpace" format="float" />
+        <attr name="bottomSpace" format="float" />
+        <attr name="leftSpace" format="float" />
+        <attr name="hintText" format="string" />
+        <attr name="slideEnable" format="boolean" />
+        <attr name="buoyBitmapWidth" format="integer" />
+        <attr name="buoyBitmapHeight" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="lineChat">
+        <attr name="rankCount" format="integer" />
+    </declare-styleable>
+</resources>

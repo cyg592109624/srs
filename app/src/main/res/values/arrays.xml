@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="count_down">
+        <item>@drawable/img_sportmode_countdown_1</item>
+        <item>@drawable/img_sportmode_countdown_2</item>
+        <item>@drawable/img_sportmode_countdown_3</item>
+        <item>@drawable/img_sportmode_countdown_4</item>
+    </string-array>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/dialog_workout_vr_img"
+        android:layout_width="380dp"
+        android:layout_height="280dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.sunrise.srs.views.NumberKeyBoardView
+        android:id="@+id/dialog_workout_vr_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/dialog_workout_vr_edit_time"
+        android:layout_width="550dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/btn_virtual_time_1"
+        android:gravity="center"
+        android:paddingLeft="100dp"
+        android:text="20"
+        android:textColor="@color/workout_mode_white"
+        android:textSize="30pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
+
+
+    <TextView
+        android:id="@+id/workout_setting_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:text="@string/workout_mode_hint_a"
+        android:textColor="@color/workout_mode_white"
+        android:textSize="12pt"
+        app:layout_constraintBottom_toTopOf="@+id/workout_setting_back"
+        app:layout_constraintLeft_toLeftOf="@+id/workout_setting_back"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_workout_vr_edit_time"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <ImageView
+        android:id="@+id/workout_setting_back"
+        android:layout_width="171dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_factory_2_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/workout_setting_start"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_workout_vr_edit_time"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <ImageView
+        android:id="@+id/workout_setting_start"
+        android:layout_width="171dp"
+        android:layout_height="70dp"
+        android:src="@drawable/btn_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/dialog_workout_vr_edit_time"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_workout_vr_edit_time"
+        app:layout_constraintVertical_bias="0.55" />
+
+</android.support.constraint.ConstraintLayout>

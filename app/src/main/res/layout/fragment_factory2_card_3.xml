@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/factory2_card3_1_usb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="@string/msg_usb_software_update"
+        android:textColor="@color/factory_white"
+        android:textSize="16pt" />
+
+    <ImageView
+        android:id="@+id/factory2_card3_1_btn"
+        android:layout_width="356dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_factory_2_up_data" />
+
+
+
+    <TextView
+        android:id="@+id/factory2_card3_2_updating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="@string/msg_software_updating"
+        android:textColor="@color/factory_white"
+        android:textSize="16pt"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_factory_update_1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/img_factory_update_1"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/factory2_card3_2_not_shut_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="@string/msg_not_short_down_sys"
+        android:textColor="@color/factory_white"
+        android:textSize="16pt"
+        android:visibility="gone" />
+
+
+
+    <ImageView
+        android:id="@+id/img_factory_update_2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/img_factory_update_2"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/factory2_card3_3_download_failed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/msg_download_failed"
+        android:textColor="@color/factory_white"
+        android:textSize="16pt"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/factory2_card3_3_btn"
+        android:layout_width="171dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_factory_2_back"
+        android:visibility="gone" />
+
+</LinearLayout>
