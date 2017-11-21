@@ -46,7 +46,7 @@ public class QuickStartServer extends BaseFloatWindowService {
             isCountDownTime = false;
 
             floatWindowHead.setTimeValue(DateUtil.getFormatMMSS(runningTimeTotal));
-            avgLevelTime = 2;
+            avgLevelTime = 60;
 
             tgLevel = timerMissionTimes % LevelView.columnCount;
 

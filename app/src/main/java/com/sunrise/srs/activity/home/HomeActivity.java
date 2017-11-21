@@ -1,5 +1,6 @@
 package com.sunrise.srs.activity.home;
 
+import android.content.ComponentName;
 import android.graphics.Bitmap;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
@@ -96,12 +97,14 @@ public class HomeActivity extends BaseFragmentActivity implements OnLanguageSele
         workOutInfo = new WorkOut();
         List<Fragment> list = new ArrayList<Fragment>();
         HomeFragmentPage1 page1 = new HomeFragmentPage1();
-        page1.setSelectReturn(HomeActivity.this);
-        list.add(page1);
         HomeFragmentPage2 page2 = new HomeFragmentPage2();
         HomeFragmentPage3 page3 = new HomeFragmentPage3();
+
+        page1.setSelectReturn(HomeActivity.this);
         page2.setSelectReturn(HomeActivity.this);
         page3.setSelectReturn(HomeActivity.this);
+
+        list.add(page1);
         list.add(page2);
         list.add(page3);
         fragmentAdapter = new HomeViewPageAdapter(fragmentManager, list);
@@ -234,6 +237,9 @@ public class HomeActivity extends BaseFragmentActivity implements OnLanguageSele
     public void onMediaStart(int mediaType) {
         serviceIntent = new Intent(HomeActivity.this, QuickStartServer.class);
         workOutInfo.setWorkOutModeName(Constant.WORK_OUT_MODE_MEDIA);
+        Intent mediaIntent=new Intent();
+        mediaIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+        ComponentName componentName=null;
         switch (mediaType) {
             default:
                 break;
@@ -286,11 +292,13 @@ public class HomeActivity extends BaseFragmentActivity implements OnLanguageSele
             level.setLevel(random.nextInt(max) % (max - min + 1) + min);
             array.add(level);
         }
+
         workOutInfo.setLevelList(array);
         serviceIntent.putExtra(Constant.WORK_OUT_INFO, workOutInfo);
-
         startService(serviceIntent);
         moveTaskToBack(true);
+
+//        mediaIntent.setComponent(componentName);
     }
 
     @OnClick(R.id.home_btn_language)

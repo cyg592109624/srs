@@ -29,23 +29,23 @@ public class HomeFragmentPage1 extends BaseFragment {
     @Override
     protected void init() {
         selectReturn = (OnModeSelectReturn) getActivity();
-        ImageView imageView1 = parentView.findViewById(R.id.workout_mode_hill);
-        ImageView imageView2 = parentView.findViewById(R.id.workout_mode_interval);
-        ImageView imageView3 = parentView.findViewById(R.id.workout_mode_goal);
-        ImageView imageView4 = parentView.findViewById(R.id.workout_mode_fitness_test);
-        ImageView imageView5 = parentView.findViewById(R.id.workout_mode_hrc);
-        ImageView imageView6 = parentView.findViewById(R.id.workout_mode_user_program);
-        ImageView imageView7 = parentView.findViewById(R.id.workout_mode_vr);
-        ImageView imageView8 = parentView.findViewById(R.id.workout_mode_quick_start);
-
-        Glide.with(this).load(R.drawable.btn_home_hill).into(imageView1);
-        Glide.with(this).load(R.drawable.btn_home_interval).into(imageView2);
-        Glide.with(this).load(R.drawable.btn_home_goal).into(imageView3);
-        Glide.with(this).load(R.drawable.btn_home_fitness).into(imageView4);
-        Glide.with(this).load(R.drawable.btn_home_hrc).into(imageView5);
-        Glide.with(this).load(R.drawable.btn_home_user_program).into(imageView6);
-        Glide.with(this).load(R.drawable.btn_home_virtual).into(imageView7);
-        Glide.with(this).load(R.drawable.btn_home_quick_start).into(imageView8);
+//        ImageView imageView1 = parentView.findViewById(R.id.workout_mode_hill);
+//        ImageView imageView2 = parentView.findViewById(R.id.workout_mode_interval);
+//        ImageView imageView3 = parentView.findViewById(R.id.workout_mode_goal);
+//        ImageView imageView4 = parentView.findViewById(R.id.workout_mode_fitness_test);
+//        ImageView imageView5 = parentView.findViewById(R.id.workout_mode_hrc);
+//        ImageView imageView6 = parentView.findViewById(R.id.workout_mode_user_program);
+//        ImageView imageView7 = parentView.findViewById(R.id.workout_mode_vr);
+//        ImageView imageView8 = parentView.findViewById(R.id.workout_mode_quick_start);
+//
+//        Glide.with(this).load(R.drawable.btn_home_hill).into(imageView1);
+//        Glide.with(this).load(R.drawable.btn_home_interval).into(imageView2);
+//        Glide.with(this).load(R.drawable.btn_home_goal).into(imageView3);
+//        Glide.with(this).load(R.drawable.btn_home_fitness).into(imageView4);
+//        Glide.with(this).load(R.drawable.btn_home_hrc).into(imageView5);
+//        Glide.with(this).load(R.drawable.btn_home_user_program).into(imageView6);
+//        Glide.with(this).load(R.drawable.btn_home_virtual).into(imageView7);
+//        Glide.with(this).load(R.drawable.btn_home_quick_start).into(imageView8);
 
     }
 

@@ -154,14 +154,7 @@ public class LanguageUtils {
     public static void updateLanguage(@NonNull Locale locale, @NonNull Resources resources) {
         Configuration config = resources.getConfiguration();
         DisplayMetrics dm = resources.getDisplayMetrics();
-//        Locale currentLocal = config.locale;
         config.locale = locale;
         resources.updateConfiguration(config, dm);
-
-        // 如果切换了语言
-//        if (!currentLocal.equals(config.locale)) {
-//            return true;
-//        }
-//        return false;
     }
 }

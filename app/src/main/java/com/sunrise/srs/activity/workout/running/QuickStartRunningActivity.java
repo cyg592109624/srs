@@ -47,7 +47,7 @@ public class QuickStartRunningActivity extends BaseRunningActivity {
             isCountDownTime = false;
             headView.setTimeValue(DateUtil.getFormatMMSS(runningTimeTotal));
 
-            avgLevelTime = 2;
+            avgLevelTime = 60;
 
             tgLevel = timerMissionTimes % LevelView.columnCount;
 
