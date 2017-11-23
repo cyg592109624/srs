@@ -12,6 +12,11 @@ public class Constant {
 
     public static String TAG = "";
 
+    public static final int LEVEL_MAX = 36;
+    public static final int LEVEL_TIME_AVG= 30;
+    public static final int LEVEL_MIN= 0;
+
+
     public static final String APP_LANGUAGE = "APP_LANGUAGE";
 
     public static final String CUSTOMER_PASS_WORD = "CUSTOMER_PASS_WORD";
@@ -88,7 +93,7 @@ public class Constant {
 
     public static final int MODE_QUICK_START = 28000;
 
-    public static final int MODE_MEDIA = 29000;
+    public static final int MODE_MEDIA = 40000;
     public static final int MODE_MEDIA_YOUTUBE = 40001;
 
     public static final String MEDIA_YOUTUBE = "com.google.android.youtube";
@@ -106,22 +111,22 @@ public class Constant {
     public static final String MEDIA_INSTAGRAM = "com.instagram.android";
 
     public static final int MODE_MEDIA_MP3 = 40006;
-    public static final String MEDIA_MP3 = "";
+    public static final String MEDIA_MP3 = "com.android.music";
 
     public static final int MODE_MEDIA_MP4 = 40007;
-    public static final String MEDIA_MP4 = "";
+    public static final String MEDIA_MP4 = "com.softwinner.fireplayer";
 
     public static final int MODE_MEDIA_AVIN = 40008;
     public static final String MEDIA_AVIN = "";
 
     public static final int MODE_MEDIA_TWITTER = 40009;
-    public static final String MEDIA_TWITTER = "";
+    public static final String MEDIA_TWITTER = "com.twitter.android";
 
     public static final int MODE_MEDIA_SCREEN_MIRROR = 40010;
-    public static final String MEDIA_SCREEN_MIRROR = "";
+    public static final String MEDIA_SCREEN_MIRROR = "com.hpplay.happyplay.aw";
 
     public static final int MODE_MEDIA_BAI_DU = 40011;
-    public static final String MEDIA_BAI_DU = "";
+    public static final String MEDIA_BAI_DU = "com.baidu.searchbox.pad";
 
     public static final int MODE_MEDIA_WEI_BO = 40012;
     public static final String MEDIA_WEI_BO = "com.sina.weibo";

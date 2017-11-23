@@ -34,7 +34,7 @@ public class GoalServer extends BaseFloatWindowService {
                 break;
             case Constant.MODE_GOAL_TIME:
                 isCountDownTime = true;
-                avgLevelTime = runningTimeTarget / LevelView.columnCount;
+                avgLevelTime = runningTimeTarget / Constant.LEVEL_TIME_AVG;
 
                 tgLevel = (int) runningTimeTotal / (int) avgLevelTime;
 
@@ -50,7 +50,7 @@ public class GoalServer extends BaseFloatWindowService {
                 avgLevelTime = 60;
 
                 timerMissionTimes = (int) runningTimeTotal / (int) avgLevelTime;
-                tgLevel = timerMissionTimes % LevelView.columnCount;
+                tgLevel = timerMissionTimes % Constant.LEVEL_TIME_AVG;
 
                 floatWindowHead.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
                 floatWindowHead.setTimeValue(DateUtil.getFormatMMSS(runningTimeTotal));
@@ -65,7 +65,7 @@ public class GoalServer extends BaseFloatWindowService {
                 avgLevelTime = 60;
 
                 timerMissionTimes = (int) runningTimeTotal / (int) avgLevelTime;
-                tgLevel = timerMissionTimes % LevelView.columnCount;
+                tgLevel = timerMissionTimes % Constant.LEVEL_TIME_AVG;
 
                 floatWindowHead.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
                 floatWindowHead.setTimeValue(DateUtil.getFormatMMSS(runningTimeTotal));

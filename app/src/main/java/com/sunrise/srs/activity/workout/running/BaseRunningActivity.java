@@ -326,7 +326,7 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
             return;
         }
         headView.levelChange(1);
-        upDataLevelValue();
+        upDataLevelValue(1);
     }
 
     @Override
@@ -335,7 +335,7 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
             return;
         }
         headView.levelChange(-1);
-        upDataLevelValue();
+        upDataLevelValue(-1);
     }
 
     @Override
@@ -542,7 +542,7 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
             runningTimeSurplus = runningTimeTarget - runningTimeTotal;
             headView.setTimeValue(DateUtil.getFormatMMSS(runningTimeSurplus));
 
-            avgLevelTime = runningTimeTarget / LevelView.columnCount;
+            avgLevelTime = runningTimeTarget / Constant.LEVEL_TIME_AVG;
             tgLevel = workOutInfo.getRunningLevelCount();
 
             headView.setLevelValue(workOutInfo.getLevelList().get(tgLevel).getLevel());
@@ -553,7 +553,7 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
             headView.setTimeValue(DateUtil.getFormatMMSS(runningTimeTotal));
             avgLevelTime = 60;
             timerMissionTimes = workOutInfo.getRunningLevelCount();
-            tgLevel = timerMissionTimes % LevelView.columnCount;
+            tgLevel = timerMissionTimes % Constant.LEVEL_TIME_AVG;
             headView.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
         }
     }
@@ -614,10 +614,10 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
             tgLevel++;
             if (!isCountDownTime) {
                 //累加时间时才触发
-                if (timerMissionTimes % LevelView.columnCount == 0) {
+                if (timerMissionTimes % Constant.LEVEL_TIME_AVG == 0) {
                     tgLevel = 0;
                     List<Level> arr = workOutInfo.getLevelList();
-                    for (int i = 0; i < LevelView.columnCount; i++) {
+                    for (int i = 0; i < Constant.LEVEL_TIME_AVG; i++) {
                         Level level = new Level();
                         level.setLevel(headView.getLevel());
                         arr.add(level);
@@ -627,7 +627,7 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
                 }
             }
             headView.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
-            upDataLevelValue();
+            levelView.reFlashView();
             moveBuoy();
         }
     }
@@ -642,7 +642,7 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
                 if (headView != null) {
                     if (headView.getLevel() > 0) {
                         headView.setLevelValue(headView.getLevel() - 1);
-                    }else {
+                    } else {
                         coolDownTimer.onFinish();
                     }
                 }
@@ -675,12 +675,23 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
     /**
      * 更新Level值以及将新的Level值写入workOutInfo
      */
-    public void upDataLevelValue() {
-        //将当前的Level值写入LevelList
-        workOutInfo.getLevelList().get(timerMissionTimes).setLevel(headView.getLevel());
+    public void upDataLevelValue(int upOrDown) {
         if (levelView != null) {
-            //更新Level值
-            levelView.setColumn(tgLevel, headView.getLevel());
+            int level = 0;
+            for (int i = timerMissionTimes; i < workOutInfo.getLevelList().size(); i++) {
+                level = workOutInfo.getLevelList().get(i).getLevel();
+                int newLevel = level + upOrDown;
+                if (newLevel <= Constant.LEVEL_MIN) {
+                    newLevel = Constant.LEVEL_MIN;
+                }
+                if (newLevel >= Constant.LEVEL_MAX) {
+                    newLevel = Constant.LEVEL_MAX;
+                }
+                //这里保存到workout中
+                workOutInfo.getLevelList().get(i).setLevel(newLevel);
+                level = 0;
+            }
+            levelView.setLevelList(workOutInfo.getLevelList());
             //刷新(重新绘制onDraw())
             levelView.reFlashView();
         }

@@ -35,7 +35,7 @@ public class QuickStartRunningActivity extends BaseRunningActivity {
             runningTimeSurplus = runningTimeTarget - runningTimeTotal;
             headView.setTimeValue(DateUtil.getFormatMMSS(runningTimeSurplus));
 
-            avgLevelTime = runningTimeTarget / LevelView.columnCount;
+            avgLevelTime = runningTimeTarget / Constant.LEVEL_TIME_AVG;
 
 
             tgLevel = timerMissionTimes;
@@ -49,7 +49,7 @@ public class QuickStartRunningActivity extends BaseRunningActivity {
 
             avgLevelTime = 60;
 
-            tgLevel = timerMissionTimes % LevelView.columnCount;
+            tgLevel = timerMissionTimes % Constant.LEVEL_TIME_AVG;
 
             headView.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
         }

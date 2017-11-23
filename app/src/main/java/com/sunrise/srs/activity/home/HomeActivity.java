@@ -1,6 +1,6 @@
 package com.sunrise.srs.activity.home;
 
-import android.content.ComponentName;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
@@ -33,7 +33,7 @@ import com.sunrise.srs.fragments.home.HomeFragmentPage3;
 import com.sunrise.srs.interfaces.home.OnLanguageSelectResult;
 import com.sunrise.srs.interfaces.home.OnInitialReturn;
 import com.sunrise.srs.interfaces.home.OnModeSelectReturn;
-import com.sunrise.srs.services.workoutrunning.QuickStartServer;
+import com.sunrise.srs.services.workoutrunning.MediaQuickStartServer;
 import com.sunrise.srs.utils.BitMapUtils;
 import com.sunrise.srs.utils.ImageUtils;
 import com.sunrise.srs.utils.ThreadPoolUtils;
@@ -60,7 +60,8 @@ public class HomeActivity extends BaseFragmentActivity implements OnLanguageSele
 
     private Bitmap selectTgBitmap;
 
-    private Intent serviceIntent;
+    private Intent mediaServerIntent;
+    private PackageManager packageManager;
 
     private final String mediaMode = "MEDIA_MODE";
 
@@ -76,7 +77,7 @@ public class HomeActivity extends BaseFragmentActivity implements OnLanguageSele
             selectTgBitmap.recycle();
             selectTgBitmap = null;
         }
-        serviceIntent = null;
+        mediaServerIntent = null;
         viewPager.removeAllViews();
         viewPager = null;
         fragmentAdapter.recycle();
@@ -87,14 +88,15 @@ public class HomeActivity extends BaseFragmentActivity implements OnLanguageSele
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (serviceIntent != null) {
-            stopService(serviceIntent);
+        if (mediaServerIntent != null) {
+            stopService(mediaServerIntent);
         }
     }
 
     @Override
     protected void init() {
         workOutInfo = new WorkOut();
+        packageManager = getApplicationContext().getPackageManager();
         List<Fragment> list = new ArrayList<Fragment>();
         HomeFragmentPage1 page1 = new HomeFragmentPage1();
         HomeFragmentPage2 page2 = new HomeFragmentPage2();
@@ -223,9 +225,9 @@ public class HomeActivity extends BaseFragmentActivity implements OnLanguageSele
 
                 break;
         }
-        if (serviceIntent != null) {
-            stopService(serviceIntent);
-            serviceIntent = null;
+        if (mediaServerIntent != null) {
+            stopService(mediaServerIntent);
+            mediaServerIntent = null;
         }
         if (intent != null) {
             intent.putExtra(Constant.WORK_OUT_INFO, workOutInfo);
@@ -235,70 +237,84 @@ public class HomeActivity extends BaseFragmentActivity implements OnLanguageSele
 
     @Override
     public void onMediaStart(int mediaType) {
-        serviceIntent = new Intent(HomeActivity.this, QuickStartServer.class);
         workOutInfo.setWorkOutModeName(Constant.WORK_OUT_MODE_MEDIA);
-        Intent mediaIntent=new Intent();
-        mediaIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-        ComponentName componentName=null;
+        Intent mediaIntent=null;
         switch (mediaType) {
             default:
                 break;
             case Constant.MODE_MEDIA_YOUTUBE:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_YOUTUBE);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_YOUTUBE);
                 break;
             case Constant.MODE_MEDIA_CHROME:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_CHROME);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_CHROME);
                 break;
             case Constant.MODE_MEDIA_FACEBOOK:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_FACEBOOK);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_FACEBOOK);
                 break;
             case Constant.MODE_MEDIA_FLIKR:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_FLIKR);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_FLIKR);
                 break;
             case Constant.MODE_MEDIA_INSTAGRAM:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_INSTAGRAM);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_INSTAGRAM);
                 break;
             case Constant.MODE_MEDIA_MP3:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_MP3);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_MP4);
                 break;
             case Constant.MODE_MEDIA_MP4:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_MP4);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_MP4);
                 break;
             case Constant.MODE_MEDIA_AVIN:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_AVIN);
+//                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_AVIN);
                 break;
             case Constant.MODE_MEDIA_TWITTER:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_TWITTER);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_TWITTER);
                 break;
             case Constant.MODE_MEDIA_SCREEN_MIRROR:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_SCREEN_MIRROR);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_SCREEN_MIRROR);
                 break;
             case Constant.MODE_MEDIA_BAI_DU:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_BAI_DU);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_BAI_DU);
                 break;
             case Constant.MODE_MEDIA_WEI_BO:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_WEI_BO);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_WEI_BO);
                 break;
             case Constant.MODE_MEDIA_I71:
                 workOutInfo.setWorkOutMode(Constant.MODE_MEDIA_I71);
+                mediaIntent = packageManager.getLaunchIntentForPackage(Constant.MEDIA_I71);
                 break;
         }
-        Random random = new Random();
-        int max = 36;
-        int min = 1;
-        List<Level> array = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
-            Level level = new Level();
-            level.setLevel(random.nextInt(max) % (max - min + 1) + min);
-            array.add(level);
+
+        if(mediaIntent!=null){
+            mediaServerIntent = new Intent(HomeActivity.this, MediaQuickStartServer.class);
+
+            Random random = new Random();
+            int max = 36;
+            int min = 1;
+            List<Level> array = new ArrayList<>();
+            for (int i = 0; i < 30; i++) {
+                Level level = new Level();
+                level.setLevel(random.nextInt(max) % (max - min + 1) + min);
+                array.add(level);
+            }
+            workOutInfo.setLevelList(array);
+            mediaServerIntent.putExtra(Constant.WORK_OUT_INFO, workOutInfo);
+
+            startService(mediaServerIntent);
+            startActivity(mediaIntent);
         }
 
-        workOutInfo.setLevelList(array);
-        serviceIntent.putExtra(Constant.WORK_OUT_INFO, workOutInfo);
-        startService(serviceIntent);
-        moveTaskToBack(true);
-
-//        mediaIntent.setComponent(componentName);
     }
 
     @OnClick(R.id.home_btn_language)

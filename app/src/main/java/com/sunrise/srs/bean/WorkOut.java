@@ -64,11 +64,12 @@ public class WorkOut implements Parcelable {
     private int vrType = Constant.MODE_VR_TYPE_VR1;
 
     private List<Level> levelList = new ArrayList<>();
+    private List<Incline> inclineList = new ArrayList<>();
 
     /**
      * 段数移动次数
      */
-    private int runningLevelCount=0;
+    private int runningLevelCount = 0;
 
     public WorkOut() {
 
@@ -91,7 +92,8 @@ public class WorkOut implements Parcelable {
         hrcType = in.readInt();
         vrType = in.readInt();
         in.readTypedList(levelList, Level.CREATOR);
-        runningLevelCount= in.readInt();
+        in.readTypedList(inclineList, Incline.CREATOR);
+        runningLevelCount = in.readInt();
     }
 
     public static final Creator<WorkOut> CREATOR = new Creator<WorkOut>() {
@@ -129,6 +131,7 @@ public class WorkOut implements Parcelable {
         parcel.writeInt(hrcType);
         parcel.writeInt(vrType);
         parcel.writeTypedList(levelList);
+        parcel.writeTypedList(inclineList);
         parcel.writeInt(runningLevelCount);
     }
 
@@ -264,6 +267,14 @@ public class WorkOut implements Parcelable {
 
     public void setLevelList(List<Level> levelList) {
         this.levelList = levelList;
+    }
+
+    public List<Incline> getInclineList() {
+        return inclineList;
+    }
+
+    public void setInclineList(List<Incline> inclineList) {
+        this.inclineList = inclineList;
     }
 
     public int getRunningLevelCount() {

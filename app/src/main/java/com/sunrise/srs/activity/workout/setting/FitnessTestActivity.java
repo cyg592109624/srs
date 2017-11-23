@@ -203,7 +203,7 @@ public class FitnessTestActivity extends BaseActivity implements OnGenderReturn,
         workOutInfo.setHrc(Math.round(hrc) + "");
 
         List<Level> array = new ArrayList<>();
-        for (int i = 0; i < LevelView.columnCount; i++) {
+        for (int i = 0; i < Constant.LEVEL_TIME_AVG; i++) {
             Level level = new Level();
             level.setLevel(1);
             array.add(level);

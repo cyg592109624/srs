@@ -71,13 +71,11 @@ public class BackPressServer extends Service {
     }
 
     private void initImageView() {
-        System.out.println("initImageView");
         mWindowManager = (WindowManager) getApplication().getSystemService(Context.WINDOW_SERVICE);
 
         DisplayMetrics dm = new DisplayMetrics();
         mWindowManager.getDefaultDisplay().getMetrics(dm);
         int screenWidth = dm.widthPixels;
-        int screenHeight = dm.heightPixels;
         dm = null;
 
         floatParams = new WindowManager.LayoutParams();

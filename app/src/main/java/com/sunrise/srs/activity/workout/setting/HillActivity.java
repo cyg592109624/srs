@@ -73,6 +73,7 @@ public class HillActivity extends BaseActivity implements OnGenderReturn, OnKeyB
 
     @Override
     protected void setTextStyle() {
+        System.out.println("hill 1---->"+System.currentTimeMillis());
         List<TextView> txtList = new ArrayList<TextView>();
 
         txtList.add((TextView) findViewById(R.id.workout_setting_head_name));
@@ -103,6 +104,9 @@ public class HillActivity extends BaseActivity implements OnGenderReturn, OnKeyB
         }
         txtList.clear();
         txtList = null;
+
+        System.out.println("hill 2---->"+System.currentTimeMillis());
+
     }
 
     @Override

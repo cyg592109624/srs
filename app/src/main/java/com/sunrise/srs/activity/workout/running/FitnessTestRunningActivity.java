@@ -20,6 +20,12 @@ import java.util.List;
 public class FitnessTestRunningActivity extends BaseRunningActivity implements DialogWarmUpClick {
     //残留问题:
     //如何界定这个模式的自动跳出;
+    //阶段跃迁 受当前心率影响 心率满足要求就会跃迁到下一个阶段不受阶段时间影响
+    //阶段跃迁需要同时更新tglevel跟timerMissionTimes,就是说这个2个参数在这个模式当中的值必须保持同步
+    //否者会出错
+
+
+
 
     private int showWarmTimes = -1;
 
@@ -49,7 +55,7 @@ public class FitnessTestRunningActivity extends BaseRunningActivity implements D
         avgLevelTime = 60;
         timerMissionTimes = workOutInfo.getRunningLevelCount();
 
-        tgLevel = timerMissionTimes % LevelView.columnCount;
+        tgLevel = timerMissionTimes %Constant.LEVEL_TIME_AVG;
 
         headView.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
 
@@ -132,10 +138,10 @@ public class FitnessTestRunningActivity extends BaseRunningActivity implements D
             tgLevel++;
             if (!isCountDownTime) {
                 //累加时间时才触发
-                if (timerMissionTimes % LevelView.columnCount == 0) {
+                if (timerMissionTimes % Constant.LEVEL_TIME_AVG == 0) {
                     tgLevel = 0;
                     List<Level> arr = workOutInfo.getLevelList();
-                    for (int i = 0; i < LevelView.columnCount; i++) {
+                    for (int i = 0; i < Constant.LEVEL_TIME_AVG; i++) {
                         Level level = new Level();
                         level.setLevel(1);
                         arr.add(level);

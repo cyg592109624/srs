@@ -6,7 +6,7 @@ package com.sunrise.srs.bean;
 
 public class LevelColumn {
     private float toX1, toX2, toY1, toY2;
-    private int level;
+    private int level=0;
 
     public LevelColumn() {
 

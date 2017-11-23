@@ -78,8 +78,6 @@ public class LineChat extends View {
         } else {
             avgWidth = (viewWidth * 0.01f * 100f / (data.size() - 1));
         }
-        System.out.println("data.size()  ---->" + data.size());
-        System.out.println("avgWidth     ---->" + avgWidth);
     }
 
     private void drawData() {

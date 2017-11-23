@@ -1,14 +1,10 @@
 package com.sunrise.srs.services.workoutrunning;
 
-import com.sunrise.srs.Constant;
-import com.sunrise.srs.utils.DateUtil;
-import com.sunrise.srs.views.LevelView;
-
 /**
  * Created by ChuHui on 2017/11/10.
  */
 
-public class QuickStartServer extends BaseFloatWindowService {
+public class MediaQuickStartServer extends BaseFloatWindowService {
 
     @Override
     public void initBottomView() {

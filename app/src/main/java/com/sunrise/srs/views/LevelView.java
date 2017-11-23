@@ -12,6 +12,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.sunrise.srs.Constant;
 import com.sunrise.srs.GlobalSetting;
 import com.sunrise.srs.R;
 import com.sunrise.srs.bean.Level;
@@ -80,12 +81,12 @@ public class LevelView extends View {
     /**
      * 一共36阶
      */
-    public static final int levelCount = 36;
+    private final int levelCount = Constant.LEVEL_MAX;
 
     /**
      * 时间将分为30份
      */
-    public static final int columnCount = 30;
+    private final int columnCount = Constant.LEVEL_TIME_AVG;
 
     /**
      * 柱状数组
@@ -249,7 +250,7 @@ public class LevelView extends View {
      * @param level 段数 0-36;
      */
     public void setColumn(int rank, int level) {
-        if ((rank >= columnCount | rank < -1) | (level > levelCount | level < -1)) {
+        if ((rank >= columnCount | rank < -1)) {
             return;
         }
         LevelColumn cell = levelColumns[rank];
