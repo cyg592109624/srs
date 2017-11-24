@@ -48,9 +48,9 @@ public class SummaryFragmentPage3 extends BaseFragment {
         txtList.add(avgValue);
 
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
         txtList.clear();
         txtList = null;

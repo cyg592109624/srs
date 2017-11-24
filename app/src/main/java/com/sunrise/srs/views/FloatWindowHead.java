@@ -69,9 +69,9 @@ public class FloatWindowHead extends ConstraintLayout {
         txtList.add((TextView) this.findViewById(R.id.workout_running_head_speed_unit));
 
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
         if (GlobalSetting.UnitType.equals(Constant.UNIT_TYPE_METRIC)) {
             txtList.get(6).setText(R.string.unit_km);

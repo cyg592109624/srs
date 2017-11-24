@@ -96,9 +96,9 @@ public class VirtualSetValueDialog extends BaseDialogFragment implements OnKeyBo
         txtList.add((TextView) parentView.findViewById(R.id.workout_setting_hint));
         txtList.add(editValue);
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
         txtList.clear();
         txtList = null;

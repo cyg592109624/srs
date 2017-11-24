@@ -120,9 +120,9 @@ public class UserProgramActivity extends BaseActivity implements OnGenderReturn,
         txtList.add(weightValue);
         txtList.add(timeValue);
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
         if (GlobalSetting.UnitType.equals(Constant.UNIT_TYPE_METRIC)) {
             txtList.get(7).setText(R.string.unit_kg);

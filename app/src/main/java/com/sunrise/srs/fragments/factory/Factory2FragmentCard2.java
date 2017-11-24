@@ -81,9 +81,9 @@ public class Factory2FragmentCard2 extends BaseFragment {
         txtList.add((TextView) parentView.findViewById(R.id.factory2_card2_2_ver_soft_value));
 
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold());
         }
         if (GlobalSetting.UnitType.equals(Constant.UNIT_TYPE_METRIC)) {
             txtList.get(6).setText(R.string.unit_km);

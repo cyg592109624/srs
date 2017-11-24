@@ -30,7 +30,6 @@ import com.sunrise.srs.interfaces.services.FloatWindowBottomCallBack;
 import com.sunrise.srs.utils.AnimationsContainer;
 import com.sunrise.srs.utils.DateUtil;
 import com.sunrise.srs.utils.ImageUtils;
-import com.sunrise.srs.views.LevelView;
 import com.sunrise.srs.views.FloatWindowBottom;
 import com.sunrise.srs.views.FloatWindowHead;
 
@@ -386,7 +385,7 @@ public abstract class BaseFloatWindowService extends Service implements FloatWin
 
             floatWindowHead.setTimeValue(DateUtil.getFormatMMSS(runningTimeSurplus));
 
-            avgLevelTime = runningTimeTarget / Constant.LEVEL_TIME_AVG;
+            avgLevelTime = runningTimeTarget / Constant.LEVEL_COLUMN;
 
             timerMissionTimes = workOutInfo.getRunningLevelCount();
 
@@ -403,7 +402,7 @@ public abstract class BaseFloatWindowService extends Service implements FloatWin
 
             timerMissionTimes = workOutInfo.getRunningLevelCount();
 
-            tgLevel = timerMissionTimes % Constant.LEVEL_TIME_AVG;
+            tgLevel = timerMissionTimes % Constant.LEVEL_COLUMN;
             floatWindowHead.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
         }
     }
@@ -701,10 +700,10 @@ public abstract class BaseFloatWindowService extends Service implements FloatWin
             tgLevel++;
             if (!isCountDownTime) {
                 //累加时间时才触发
-                if (timerMissionTimes % Constant.LEVEL_TIME_AVG == 0) {
+                if (timerMissionTimes % Constant.LEVEL_COLUMN == 0) {
                     tgLevel = 0;
                     List<Level> arr = workOutInfo.getLevelList();
-                    for (int i = 0; i < Constant.LEVEL_TIME_AVG; i++) {
+                    for (int i = 0; i < Constant.LEVEL_COLUMN; i++) {
                         Level level = new Level();
                         level.setLevel(floatWindowHead.getLevel());
                         arr.add(level);

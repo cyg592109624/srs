@@ -34,11 +34,11 @@ public class FactoriesActivity extends BaseActivity {
         TextView title = (TextView) findViewById(R.id.factories_title);
         TextView hint = (TextView) findViewById(R.id.factories_hint);
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(title, TextUtils.MicrosoftBold(this));
-            TextUtils.setTextTypeFace(hint, TextUtils.Microsoft(this));
+            TextUtils.setTextTypeFace(title, TextUtils.MicrosoftBold());
+            TextUtils.setTextTypeFace(hint, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(title, TextUtils.ArialBold(this));
-            TextUtils.setTextTypeFace(hint, TextUtils.Arial(this));
+            TextUtils.setTextTypeFace(title, TextUtils.ArialBold());
+            TextUtils.setTextTypeFace(hint, TextUtils.Arial());
         }
         title = null;
         hint = null;

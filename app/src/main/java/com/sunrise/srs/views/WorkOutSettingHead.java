@@ -38,11 +38,11 @@ public class WorkOutSettingHead extends LinearLayout {
         workOutHint = findViewById(R.id.workout_head_hint);
         workOutIcon = findViewById(R.id.workout_head_icon);
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(workOutHint, TextUtils.Microsoft(context));
-            TextUtils.setTextTypeFace(workOutHint, TextUtils.Microsoft(context));
+            TextUtils.setTextTypeFace(workOutHint, TextUtils.Microsoft());
+            TextUtils.setTextTypeFace(workOutHint, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(workOutMode, TextUtils.Arial(context));
-            TextUtils.setTextTypeFace(workOutMode, TextUtils.Arial(context));
+            TextUtils.setTextTypeFace(workOutMode, TextUtils.Arial());
+            TextUtils.setTextTypeFace(workOutMode, TextUtils.Arial());
         }
     }
 

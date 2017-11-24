@@ -84,9 +84,9 @@ public class LevelView extends View {
     private final int levelCount = Constant.LEVEL_MAX;
 
     /**
-     * 时间将分为30份
+     * 时间将分为30份 也就是柱状数量
      */
-    private final int columnCount = Constant.LEVEL_TIME_AVG;
+    private final int columnCount = Constant.LEVEL_COLUMN;
 
     /**
      * 柱状数组
@@ -125,9 +125,9 @@ public class LevelView extends View {
         mPaint.setFilterBitmap(true);
         mPaint.setColor(ContextCompat.getColor(getContext(), R.color.factory_tabs_on));
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            mPaint.setTypeface(TextUtils.Microsoft(context));
+            mPaint.setTypeface(TextUtils.Microsoft());
         } else {
-            mPaint.setTypeface(TextUtils.Arial(context));
+            mPaint.setTypeface(TextUtils.Arial());
         }
 
         levelColumns = new LevelColumn[columnCount];

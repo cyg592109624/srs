@@ -35,7 +35,7 @@
         android:supportsRtl="true">
         <activity android:name=".activity.LogoActivity"
             android:configChanges="screenSize|keyboardHidden|orientation"
-            android:exported="false"
+            android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="sensorLandscape">
             <intent-filter>
@@ -249,8 +249,7 @@
         <service android:name=".services.workoutrunning.HillServer" />
         <service android:name=".services.workoutrunning.IntervalServer" />
         <service android:name=".services.workoutrunning.QuickStartServer" />
-
-        <service android:name=".services.settings.BackPressServer" />
+        <service android:name=".services.workoutrunning.GoalServer" />
 
 
     </application>

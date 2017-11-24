@@ -34,9 +34,9 @@ public class Factory2FragmentCard4 extends BaseFragment {
     protected void setTextStyle() {
         TextView hint = (TextView) parentView.findViewById(R.id.factory2_card4_hint);
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(hint, TextUtils.Microsoft(getContext()));
+            TextUtils.setTextTypeFace(hint, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(hint, TextUtils.Arial(getContext()));
+            TextUtils.setTextTypeFace(hint, TextUtils.Arial());
         }
         hint = null;
     }

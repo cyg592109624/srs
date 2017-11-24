@@ -1,8 +1,7 @@
-package com.sunrise.srs.fragments.settings;
+package com.sunrise.srs.fragments.setting;
 
 import android.app.Service;
 import android.media.AudioManager;
-import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -49,9 +48,9 @@ public class SettingsFragmentCard1 extends BaseFragment implements SeekBar.OnSee
         txtList.add((TextView)parentView.findViewById(R.id.settings_card1_txt2));
 
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold());
         }
         txtList.clear();
         txtList=null;

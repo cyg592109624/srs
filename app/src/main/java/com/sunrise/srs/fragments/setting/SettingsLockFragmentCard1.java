@@ -1,4 +1,4 @@
-package com.sunrise.srs.fragments.settings;
+package com.sunrise.srs.fragments.setting;
 
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
@@ -112,9 +112,9 @@ public class SettingsLockFragmentCard1 extends BaseFragment implements OnKeyBoar
         txtList.add(remainingDistanceValue);
 
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold());
         }
 
         //所以数据保存都是以国际标准保存的 再进行转换

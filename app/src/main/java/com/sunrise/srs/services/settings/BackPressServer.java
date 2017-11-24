@@ -108,6 +108,8 @@ public class BackPressServer extends Service {
             @Override
             public boolean onTouch(View view, MotionEvent event) {
                 switch (event.getAction()) {
+                    default:
+                        break;
                     case MotionEvent.ACTION_DOWN:
                         lastX = (int) event.getRawX();
                         lastY = (int) event.getRawY();

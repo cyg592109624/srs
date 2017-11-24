@@ -72,9 +72,9 @@ public class Factory2Activity extends BaseFragmentActivity {
     @Override
     protected void setTextStyle() {
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold(this));
+            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold(this));
+            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold());
         }
     }
 

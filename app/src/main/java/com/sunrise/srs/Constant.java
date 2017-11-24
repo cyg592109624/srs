@@ -13,7 +13,10 @@ public class Constant {
     public static String TAG = "";
 
     public static final int LEVEL_MAX = 36;
-    public static final int LEVEL_TIME_AVG= 30;
+    /**
+     * 柱状条数量
+     */
+    public static final int LEVEL_COLUMN = 30;
     public static final int LEVEL_MIN= 0;
 
 

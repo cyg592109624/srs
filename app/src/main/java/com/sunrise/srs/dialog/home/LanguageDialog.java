@@ -49,9 +49,9 @@ public class LanguageDialog extends BaseDialogFragment {
     @Override
     protected void setTextStyle() {
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(textViews, TextUtils.Microsoft(getContext()));
+            TextUtils.setTextTypeFace(textViews, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(textViews, TextUtils.Arial(getContext()));
+            TextUtils.setTextTypeFace(textViews, TextUtils.Arial());
         }
         TextUtils.changeTextColor(textViews, ContextCompat.getColor(getContext(), R.color.language_btn_on));
         ImageUtils.changeImageView(imageViews);

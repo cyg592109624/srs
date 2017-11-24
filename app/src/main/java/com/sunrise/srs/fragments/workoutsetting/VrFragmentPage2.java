@@ -51,9 +51,9 @@ public class VrFragmentPage2 extends BaseFragment {
         txtList.add((TextView) parentView.findViewById(R.id.workout_mode_vr_name_8_1));
         txtList.add((TextView) parentView.findViewById(R.id.workout_mode_vr_name_8_2));
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
         txtList.clear();
         txtList = null;

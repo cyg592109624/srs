@@ -17,7 +17,6 @@ import com.sunrise.srs.interfaces.workout.setting.OnGenderReturn;
 import com.sunrise.srs.interfaces.workout.setting.OnKeyBoardReturn;
 import com.sunrise.srs.utils.LanguageUtils;
 import com.sunrise.srs.utils.TextUtils;
-import com.sunrise.srs.views.LevelView;
 import com.sunrise.srs.views.GenderView;
 import com.sunrise.srs.views.NumberKeyBoardView;
 
@@ -83,9 +82,9 @@ public class FitnessTestActivity extends BaseActivity implements OnGenderReturn,
         txtList.add(ageValue);
         txtList.add(weightValue);
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
         if (GlobalSetting.UnitType.equals(Constant.UNIT_TYPE_METRIC)) {
             txtList.get(5).setText(R.string.unit_kg);
@@ -203,7 +202,7 @@ public class FitnessTestActivity extends BaseActivity implements OnGenderReturn,
         workOutInfo.setHrc(Math.round(hrc) + "");
 
         List<Level> array = new ArrayList<>();
-        for (int i = 0; i < Constant.LEVEL_TIME_AVG; i++) {
+        for (int i = 0; i < Constant.LEVEL_COLUMN; i++) {
             Level level = new Level();
             level.setLevel(1);
             array.add(level);

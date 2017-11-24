@@ -235,9 +235,9 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
         txtList.add((TextView) findViewById(R.id.workout_running_media_twitter_name));
         txtList.add((TextView) findViewById(R.id.workout_running_media_screen_mirroring_name));
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
     }
 
@@ -542,7 +542,7 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
             runningTimeSurplus = runningTimeTarget - runningTimeTotal;
             headView.setTimeValue(DateUtil.getFormatMMSS(runningTimeSurplus));
 
-            avgLevelTime = runningTimeTarget / Constant.LEVEL_TIME_AVG;
+            avgLevelTime = runningTimeTarget / Constant.LEVEL_COLUMN;
             tgLevel = workOutInfo.getRunningLevelCount();
 
             headView.setLevelValue(workOutInfo.getLevelList().get(tgLevel).getLevel());
@@ -553,7 +553,7 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
             headView.setTimeValue(DateUtil.getFormatMMSS(runningTimeTotal));
             avgLevelTime = 60;
             timerMissionTimes = workOutInfo.getRunningLevelCount();
-            tgLevel = timerMissionTimes % Constant.LEVEL_TIME_AVG;
+            tgLevel = timerMissionTimes % Constant.LEVEL_COLUMN;
             headView.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
         }
     }
@@ -614,10 +614,10 @@ public abstract class BaseRunningActivity extends BaseFragmentActivity implement
             tgLevel++;
             if (!isCountDownTime) {
                 //累加时间时才触发
-                if (timerMissionTimes % Constant.LEVEL_TIME_AVG == 0) {
+                if (timerMissionTimes % Constant.LEVEL_COLUMN == 0) {
                     tgLevel = 0;
                     List<Level> arr = workOutInfo.getLevelList();
-                    for (int i = 0; i < Constant.LEVEL_TIME_AVG; i++) {
+                    for (int i = 0; i < Constant.LEVEL_COLUMN; i++) {
                         Level level = new Level();
                         level.setLevel(headView.getLevel());
                         arr.add(level);

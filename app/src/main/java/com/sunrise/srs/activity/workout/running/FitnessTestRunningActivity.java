@@ -10,7 +10,6 @@ import com.sunrise.srs.interfaces.workout.running.DialogWarmUpClick;
 import com.sunrise.srs.utils.DateUtil;
 import com.sunrise.srs.utils.ImageUtils;
 import com.sunrise.srs.utils.ThreadPoolUtils;
-import com.sunrise.srs.views.LevelView;
 
 import java.util.List;
 
@@ -55,7 +54,7 @@ public class FitnessTestRunningActivity extends BaseRunningActivity implements D
         avgLevelTime = 60;
         timerMissionTimes = workOutInfo.getRunningLevelCount();
 
-        tgLevel = timerMissionTimes %Constant.LEVEL_TIME_AVG;
+        tgLevel = timerMissionTimes %Constant.LEVEL_COLUMN;
 
         headView.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
 
@@ -138,10 +137,10 @@ public class FitnessTestRunningActivity extends BaseRunningActivity implements D
             tgLevel++;
             if (!isCountDownTime) {
                 //累加时间时才触发
-                if (timerMissionTimes % Constant.LEVEL_TIME_AVG == 0) {
+                if (timerMissionTimes % Constant.LEVEL_COLUMN == 0) {
                     tgLevel = 0;
                     List<Level> arr = workOutInfo.getLevelList();
-                    for (int i = 0; i < Constant.LEVEL_TIME_AVG; i++) {
+                    for (int i = 0; i < Constant.LEVEL_COLUMN; i++) {
                         Level level = new Level();
                         level.setLevel(1);
                         arr.add(level);

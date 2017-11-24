@@ -1,4 +1,4 @@
-package com.sunrise.srs.fragments.settings;
+package com.sunrise.srs.fragments.setting;
 
 import com.sunrise.srs.R;
 import com.sunrise.srs.base.BaseFragment;

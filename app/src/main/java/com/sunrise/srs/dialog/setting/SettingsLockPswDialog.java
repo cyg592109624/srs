@@ -1,4 +1,4 @@
-package com.sunrise.srs.dialog.settings;
+package com.sunrise.srs.dialog.setting;
 
 import com.sunrise.srs.R;
 import com.sunrise.srs.activity.setting.SettingLockActivity;

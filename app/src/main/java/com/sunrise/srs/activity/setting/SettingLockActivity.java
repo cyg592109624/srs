@@ -11,9 +11,9 @@ import com.sunrise.srs.Constant;
 import com.sunrise.srs.GlobalSetting;
 import com.sunrise.srs.R;
 import com.sunrise.srs.base.BaseFragmentActivity;
-import com.sunrise.srs.dialog.settings.SettingsLockPswDialog;
-import com.sunrise.srs.fragments.settings.SettingsLockFragmentCard1;
-import com.sunrise.srs.fragments.settings.SettingsLockFragmentCard2;
+import com.sunrise.srs.dialog.setting.SettingsLockPswDialog;
+import com.sunrise.srs.fragments.setting.SettingsLockFragmentCard1;
+import com.sunrise.srs.fragments.setting.SettingsLockFragmentCard2;
 import com.sunrise.srs.interfaces.workout.setting.OnKeyBoardReturn;
 import com.sunrise.srs.utils.ImageUtils;
 import com.sunrise.srs.utils.LanguageUtils;
@@ -62,9 +62,9 @@ public class SettingLockActivity extends BaseFragmentActivity implements OnKeyBo
     @Override
     protected void setTextStyle() {
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold());
         }
     }
 

@@ -97,9 +97,9 @@ public class VirtualRealityActivity extends BaseFragmentActivity implements View
         txtList.add((TextView) findViewById(R.id.workout_setting_head_name));
         txtList.add(settingHeadHint);
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(this));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(this));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
         txtList.clear();
         txtList = null;

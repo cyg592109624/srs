@@ -1,4 +1,4 @@
-package com.sunrise.srs.fragments.settings;
+package com.sunrise.srs.fragments.setting;
 
 import android.support.v4.content.ContextCompat;
 import android.view.View;
@@ -52,9 +52,9 @@ public class SettingsLockFragmentCard2 extends BaseFragment implements OnKeyBoar
         txtList.add((TextView) parentView.findViewById(R.id.settings_card4_2_srs_psw_value));
         txtList.add(psw);
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold());
         }
         txtList.clear();
         txtList = null;

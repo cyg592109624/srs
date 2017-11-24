@@ -78,9 +78,9 @@ public class Factory1Activity extends BaseActivity {
         txtList.add((TextView) findViewById(R.id.factory1_type));
 
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold(this));
+            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold(this));
+            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold());
         }
         txtList.clear();
         txtList = null;

@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.sunrise.srs.utils.LanguageUtils;
 import com.sunrise.srs.utils.SharedPreferencesUtils;
+import com.sunrise.srs.utils.TextUtils;
 import com.sunrise.srs.utils.ThreadPoolUtils;
 
 /**
@@ -16,11 +17,10 @@ public class SrsApplication extends Application {
     public void onCreate() {
         super.onCreate();
         GlobalSetting.AppLanguage = LanguageUtils.getAppLanguage(getResources());
-
         ThreadPoolUtils.runTaskOnThread(new Runnable() {
             @Override
             public void run() {
-
+                TextUtils.getInstance(getApplicationContext());
                 //所以数据保存都是以公制保存的 使用时 按实际情况转换
                 GlobalSetting.CustomerPassWord = (String) SharedPreferencesUtils.get(getApplicationContext(), Constant.CUSTOMER_PASS_WORD, GlobalSetting.CustomerPassWord);
 

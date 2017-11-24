@@ -1,4 +1,4 @@
-package com.sunrise.treadmill.utils;
+package com.sunrise.srs.utils;
 
 import android.content.Context;
 import android.util.TypedValue;

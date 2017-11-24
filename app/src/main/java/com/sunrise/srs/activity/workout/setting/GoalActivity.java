@@ -82,9 +82,9 @@ public class GoalActivity extends BaseFragmentActivity implements OnGoalSetValue
         txtList.add(distanceValue);
         txtList.add(calValue);
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
         txtList.clear();
         txtList = null;
@@ -190,7 +190,7 @@ public class GoalActivity extends BaseFragmentActivity implements OnGoalSetValue
         int max = 36;
         int min = 1;
         List<Level> array = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < Constant.LEVEL_COLUMN; i++) {
             Level level = new Level();
             level.setLevel(random.nextInt(max) % (max - min + 1) + min);
             array.add(level);

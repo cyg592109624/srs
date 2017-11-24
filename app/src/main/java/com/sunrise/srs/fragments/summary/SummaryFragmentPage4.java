@@ -80,9 +80,9 @@ public class SummaryFragmentPage4 extends BaseFragment {
         txtList.add((TextView) parentView.findViewById(R.id.summary_fragment4_avg_vo2_value_des));
 
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
         if (GlobalSetting.UnitType.equals(Constant.UNIT_TYPE_METRIC)) {
             txtList.get(6).setText(R.string.unit_km);

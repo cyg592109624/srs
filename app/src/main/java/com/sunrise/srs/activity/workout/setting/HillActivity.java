@@ -73,9 +73,9 @@ public class HillActivity extends BaseActivity implements OnGenderReturn, OnKeyB
 
     @Override
     protected void setTextStyle() {
-        System.out.println("hill 1---->"+System.currentTimeMillis());
         List<TextView> txtList = new ArrayList<TextView>();
 
+        System.out.println("hill 1---->"+System.currentTimeMillis());
         txtList.add((TextView) findViewById(R.id.workout_setting_head_name));
         txtList.add((TextView) findViewById(R.id.workout_setting_head_hint));
         txtList.add((TextView) findViewById(R.id.workout_setting_hint));
@@ -87,16 +87,19 @@ public class HillActivity extends BaseActivity implements OnGenderReturn, OnKeyB
 
         txtList.add((TextView) findViewById(R.id.workout_edit_time));
         txtList.add((TextView) findViewById(R.id.workout_edit_time_unit));
+        System.out.println("hill 2---->"+System.currentTimeMillis());
 
         txtList.add(ageValue);
         txtList.add(weightValue);
         txtList.add(timeValue);
 
+        System.out.println("hill 3---->"+System.currentTimeMillis());
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
+        System.out.println("hill 4---->"+System.currentTimeMillis());
         if (GlobalSetting.UnitType.equals(Constant.UNIT_TYPE_METRIC)) {
             txtList.get(5).setText(R.string.unit_kg);
         } else {
@@ -105,7 +108,6 @@ public class HillActivity extends BaseActivity implements OnGenderReturn, OnKeyB
         txtList.clear();
         txtList = null;
 
-        System.out.println("hill 2---->"+System.currentTimeMillis());
 
     }
 

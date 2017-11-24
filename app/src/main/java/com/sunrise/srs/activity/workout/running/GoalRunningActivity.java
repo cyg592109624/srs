@@ -7,7 +7,6 @@ import com.sunrise.srs.Constant;
 import com.sunrise.srs.services.workoutrunning.GoalServer;
 import com.sunrise.srs.utils.DateUtil;
 import com.sunrise.srs.utils.ThreadPoolUtils;
-import com.sunrise.srs.views.LevelView;
 
 /**
  * Created by ChuHui on 2017/9/27.
@@ -37,7 +36,7 @@ public class GoalRunningActivity extends BaseRunningActivity {
                 break;
             case Constant.MODE_GOAL_TIME:
                 isCountDownTime = true;
-                avgLevelTime = runningTimeTarget / Constant.LEVEL_TIME_AVG;
+                avgLevelTime = runningTimeTarget / Constant.LEVEL_COLUMN;
 
                 tgLevel = workOutInfo.getRunningLevelCount();
 
@@ -53,7 +52,7 @@ public class GoalRunningActivity extends BaseRunningActivity {
                 avgLevelTime = 60;
 
                 timerMissionTimes = workOutInfo.getRunningLevelCount();
-                tgLevel = timerMissionTimes % Constant.LEVEL_TIME_AVG;
+                tgLevel = timerMissionTimes % Constant.LEVEL_COLUMN;
 
                 headView.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
                 headView.setTimeValue(DateUtil.getFormatMMSS(runningTimeTotal));
@@ -68,7 +67,7 @@ public class GoalRunningActivity extends BaseRunningActivity {
                 avgLevelTime = 60;
 
                 timerMissionTimes = workOutInfo.getRunningLevelCount();
-                tgLevel = timerMissionTimes % Constant.LEVEL_TIME_AVG;
+                tgLevel = timerMissionTimes % Constant.LEVEL_COLUMN;
 
                 headView.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
                 headView.setTimeValue(DateUtil.getFormatMMSS(runningTimeTotal));

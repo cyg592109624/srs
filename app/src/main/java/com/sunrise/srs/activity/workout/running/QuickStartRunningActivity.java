@@ -7,7 +7,6 @@ import com.sunrise.srs.Constant;
 import com.sunrise.srs.services.workoutrunning.QuickStartServer;
 import com.sunrise.srs.utils.DateUtil;
 import com.sunrise.srs.utils.ThreadPoolUtils;
-import com.sunrise.srs.views.LevelView;
 
 /**
  * Created by ChuHui on 2017/9/27.
@@ -35,7 +34,7 @@ public class QuickStartRunningActivity extends BaseRunningActivity {
             runningTimeSurplus = runningTimeTarget - runningTimeTotal;
             headView.setTimeValue(DateUtil.getFormatMMSS(runningTimeSurplus));
 
-            avgLevelTime = runningTimeTarget / Constant.LEVEL_TIME_AVG;
+            avgLevelTime = runningTimeTarget / Constant.LEVEL_COLUMN;
 
 
             tgLevel = timerMissionTimes;
@@ -49,7 +48,7 @@ public class QuickStartRunningActivity extends BaseRunningActivity {
 
             avgLevelTime = 60;
 
-            tgLevel = timerMissionTimes % Constant.LEVEL_TIME_AVG;
+            tgLevel = timerMissionTimes % Constant.LEVEL_COLUMN;
 
             headView.setLevelValue(workOutInfo.getLevelList().get(timerMissionTimes).getLevel());
         }

@@ -44,7 +44,7 @@ public class LogoImageView extends android.support.v7.widget.AppCompatImageView 
     /**
      * 移动的阈值
      */
-    private static final int TOUCH_SLOP = 100;
+    private final int TOUCH_SLOP = 100;
 
 
     public LogoImageView(Context context, @Nullable AttributeSet attrs) {

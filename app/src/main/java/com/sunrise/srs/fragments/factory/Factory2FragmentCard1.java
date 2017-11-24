@@ -101,9 +101,9 @@ public class Factory2FragmentCard1 extends BaseFragment implements OnKeyBoardRet
         txtList.add(pwmValue);
 
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold());
         }
         txtList.clear();
         txtList = null;

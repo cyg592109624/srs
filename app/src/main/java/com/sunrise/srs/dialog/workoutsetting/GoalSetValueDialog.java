@@ -90,9 +90,9 @@ public class GoalSetValueDialog extends BaseDialogFragment implements OnKeyBoard
     @Override
     protected void setTextStyle() {
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(editValue, TextUtils.Microsoft(getContext()));
+            TextUtils.setTextTypeFace(editValue, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(editValue, TextUtils.Arial(getContext()));
+            TextUtils.setTextTypeFace(editValue, TextUtils.Arial());
         }
     }
 

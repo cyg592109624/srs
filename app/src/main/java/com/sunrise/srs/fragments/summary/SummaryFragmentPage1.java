@@ -77,9 +77,9 @@ public class SummaryFragmentPage1 extends BaseFragment {
         txtList.add((TextView) parentView.findViewById(R.id.summary_fragment1_avg_speed_unit));
 
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Microsoft());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.Arial(getContext()));
+            TextUtils.setTextTypeFace(txtList, TextUtils.Arial());
         }
 
         if (GlobalSetting.UnitType.equals(Constant.UNIT_TYPE_METRIC)) {

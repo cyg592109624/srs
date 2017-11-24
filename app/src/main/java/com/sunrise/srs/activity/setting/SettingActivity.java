@@ -20,10 +20,10 @@ import com.sunrise.srs.Constant;
 import com.sunrise.srs.GlobalSetting;
 import com.sunrise.srs.R;
 import com.sunrise.srs.base.BaseFragmentActivity;
-import com.sunrise.srs.fragments.settings.SettingsFragmentCard1;
-import com.sunrise.srs.fragments.settings.SettingsFragmentCard2;
-import com.sunrise.srs.fragments.settings.SettingsFragmentCard3;
-import com.sunrise.srs.fragments.settings.SettingsFragmentCard4;
+import com.sunrise.srs.fragments.setting.SettingsFragmentCard1;
+import com.sunrise.srs.fragments.setting.SettingsFragmentCard2;
+import com.sunrise.srs.fragments.setting.SettingsFragmentCard3;
+import com.sunrise.srs.fragments.setting.SettingsFragmentCard4;
 import com.sunrise.srs.services.settings.BackPressServer;
 import com.sunrise.srs.utils.ImageUtils;
 import com.sunrise.srs.utils.LanguageUtils;
@@ -109,9 +109,9 @@ public class SettingActivity extends BaseFragmentActivity {
     @Override
     protected void setTextStyle() {
         if (GlobalSetting.AppLanguage.equals(LanguageUtils.zh_CN)) {
-            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.MicrosoftBold());
         } else {
-            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold(activityContext));
+            TextUtils.setTextTypeFace(txtList, TextUtils.ArialBold());
         }
     }
 
